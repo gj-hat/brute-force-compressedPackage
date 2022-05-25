@@ -27,7 +27,7 @@ for opt, value in opts:
         print("")
         print("-l 密码长度区间例如8-16")
         print("-p 可能含有的密码字符串 如果不填写则使用默认字符集 \n   例如您大致记得您的密码只有小写则此处可填写abcdefghijklmnopqrstuvwxyz")
-        print("-t 进程数 这取决于您的电脑 可以省略")
+        print("-t 线程数 这取决于您的电脑 可以省略")
         print("-o 输出文件路径 可以省略")
         print("最后一个参数是文件路径")
         sys.exit()
