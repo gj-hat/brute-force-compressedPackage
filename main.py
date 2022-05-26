@@ -7,7 +7,7 @@ import getopt
 
 pas_len = ''
 pass_chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!@#$%^&*()_+-=[]{}|;\':",<>?/'
-process_num = 1
+process_num = 0
 out_path = ''
 file_form = '7z'
 path = ''
@@ -31,9 +31,6 @@ for opt, value in opts:
         print("-o 输出文件路径 可以省略")
         print("最后一个参数是文件路径")
         sys.exit()
-    if opt in "-l":
-        # 密码长度区间例如1-2
-        pas_len = value
     if opt in "-p":
         # 可能含有的密码字符串
         pass_chars = value
@@ -43,6 +40,9 @@ for opt, value in opts:
     if opt in "-o":
         # 输出文件路径
         out_path = value
+    if opt in "-l":
+        # 密码长度区间例如1-2
+        pas_len = value
 # 文件路径
 path = args[0]
 if pas_len == '' or path == '':
